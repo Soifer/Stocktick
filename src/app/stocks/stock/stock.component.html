@@ -1,0 +1,23 @@
+<div class="stock">
+  <div class="stock-details">
+    <div class="stock-symbol">
+      <span>Stock:</span>
+      <span>{{stock.name | uppercase}}</span>
+    </div>
+    <div class="stock-price">
+      <span>Price:</span>
+      <span>{{stock.price | currency}}</span>
+    </div>
+    <div class="stock-volume">
+      <span>Volume:</span>
+      <span>{{stock.volume}}</span>
+    </div>
+  </div>
+  <div class="stock-last-update">
+    <span>Updated {{stock.timestamp | date| timeAgo}}</span>
+  </div>
+  <div class="stock-btn-remove">
+      <button (click)="onRemove(stock)" mat-raised-button>Remove</button>
+  </div>
+  
+</div>

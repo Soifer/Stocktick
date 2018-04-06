@@ -1,0 +1,12 @@
+<div class="stock-slector-container">
+  <div class="stock-slector-container-title">
+    <h4>Stock Selector</h4>
+  </div>
+  <div class="stock-slector-container-list">
+    <mat-form-field>
+      <mat-select [placeholder]="'Select Stock...'" [formControl]="stockSelector"  [value]="selected">
+        <mat-option  *ngFor="let stock of stockList | orderBy: 'name'" [value]="stock.name">{{stock.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>

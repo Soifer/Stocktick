@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-sm-3 col-md-6 col-lg-4 row-title">
+    <h4>{{title}}</h4>
+  </div>
+  <div class="col-sm-3 col-md-6 col-lg-8 row-interval">
+    <div class="refresh-rate">
+      <span>Refresh Rate: (seconds)</span>
+      <input onkeydown="return false" (change)="onValueChanged($event)" value="{{minInterval}}" step="{{stepInterval}}" min="{{minInterval}}"
+        class="row-interval-field" type="number">
+    </div>
+  </div>
+</div>
+
+<div class="stock-container">
+  <div class="row">
+    <div class="col-sm-3 col-md-6 col-lg-12 row-title" *ngFor="let stock of stocks | orderBy: 'volume':false:false: compareByVolume; let i = index"
+      [attr.data-index]="i">
+      <app-stock [stock]="stock"></app-stock>
+    </div>
+  </div>
+</div>

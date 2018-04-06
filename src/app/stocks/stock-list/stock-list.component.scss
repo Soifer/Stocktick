@@ -1,0 +1,21 @@
+.row {
+    margin:0;
+   &-interval {
+        margin-top: auto;
+        margin-bottom: auto;
+        .refresh-rate{
+            display: flex;
+            justify-content: flex-end;
+            input{
+                width: 50px;
+                height: 25px;
+                margin-left: 5px;
+            }
+        }
+
+    }
+}
+.stock-container{
+    max-height: 800px;
+    overflow-y: scroll;
+}

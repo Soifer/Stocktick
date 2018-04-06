@@ -1,0 +1,13 @@
+.stock-slector-container{
+    min-height: 800px;
+    display: inline-block; 
+    &-title{
+
+    }
+    &-list{
+        padding-top: 25px;
+    }
+    &-message{
+        position: absolute;
+    }
+}
